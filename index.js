@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const sectionCurriculum = document.querySelector('.curriculum');
     const sectionPortfolio = document.querySelector('.portfolio');
 
+   // const colorRosa = '#e97be4';;
+   // const colorGris = '#0a0a09';
+
     sectionSobreMi.style.display = 'flex';
     sectionCurriculum.style.display = 'none';
     sectionPortfolio.style.display = 'none';
