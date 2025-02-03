@@ -43,7 +43,7 @@ body {
   text-align: center;
   align-items: center;
   perspective: 1000px;
-  width: 100%;
+  width: 95%;
   height: 100vh;
 
   .img {
@@ -78,6 +78,7 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  
 }
 /*estilos del h1 */
 @mixin titulo {
@@ -108,24 +109,25 @@ body {
 
 @keyframes nav{
     0%{
-        border-top-left-radius: 300px;
+        border-top-left-radius: 20px;
         transition: 1s;
         border: #7af376 5px dotted;
     }
     25%{
-        border-top-right-radius: 150px;
+        border-top-right-radius: 20px;
         transition: 1s;
         border: #76f3e9 5px dotted;
     }
     50%{
-        border-bottom-left-radius: 50px;
+        border-bottom-left-radius: 20px;
         border: #768df3 5px dotted;
     }
     75%{
-        border-bottom-right-radius: 50px;
+        border-bottom-right-radius: 20px;
         border: #50359c 5px dotted;
     }
     100%{
+        border-radius: 10px;
         border-style: dashed;
         border: #7af376 5px dotted;
     }
@@ -161,7 +163,6 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: $bg_color;
-    border-radius: 10px;
     animation: nav 1s ease-in-out  0.5s infinite;
 
     a {
@@ -500,7 +501,8 @@ $imagenes: img1 img2 img3 img4 img5;
   .c_div .div_circulo {
     width: 100%;
     height: 20%;
-    @extend %flexRow;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -566,7 +568,8 @@ $imagenes: img1 img2 img3 img4 img5;
   .c_div .div_circulo {
     width: 100%;
     height: 20%;
-    @extend %flexRow;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
