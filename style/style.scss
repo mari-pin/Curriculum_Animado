@@ -6,6 +6,18 @@ $color: white;
 $color_rosa: #e97be4;
 $color_morado: #af13bd;
 
+
+/*plantillas para flex*/
+
+%flexRow{
+    display:flex;
+    flex-direction: row;
+}
+%flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -124,7 +136,7 @@ h1 {
   }
   
 header {
-  display: grid;
+
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -144,8 +156,7 @@ header {
     grid-area: 1 / 3 / 2 / 6;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
+    @extend %flexRow;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
@@ -183,8 +194,7 @@ i {
 }
 
 .estrecho .iconos {
-  display: flex;
-  flex-direction: row;
+    @extend %flexRow;
   gap: 2px;
   align-items: center;
  
@@ -200,8 +210,7 @@ i {
 /*sobre mi */
 
 .sobre-mi {
-  display: flex;
-  flex-direction: column;
+@extend %flexColumn;
   background-color: $bg_colorOscuro;
   padding-bottom: 5px;
   padding-top: 70px;
@@ -231,8 +240,7 @@ i {
 }
 
 .sobre-mi article {
-  display: flex;
-  flex-direction: row;
+    @extend %flexRow;
   flex-wrap: wrap;
   gap: 5px;
   justify-content: space-around;
@@ -241,8 +249,7 @@ i {
 }
 
 .sobre-mi div {
-  display: flex;
-  flex-direction: row;
+    @extend %flexRow;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 10px;
@@ -254,8 +261,7 @@ i {
   background-color: $bg_color;
 }
 .sobre-mi .texto {
-  display: flex;
-  flex-direction: column;
+  @extend %flexColumn;
   justify-content: center;
   align-items: center;
   width: 60%;
@@ -286,8 +292,7 @@ i {
   background-color: $bg_colorOscuro;
   width: 100%;
   height: 80%;
-  display: flex;
-  flex-direction: column;
+  @extend %flexColumn;
   align-items: center;
   justify-content: center;
   padding-top: 70px;
@@ -314,8 +319,7 @@ i {
 .imagenes {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: row;
+  @extend %flexRow;
   justify-content: center;
 
   .img1 {
@@ -382,8 +386,7 @@ $imagenes: img1 img2 img3 img4 img5;
   background-color: $bg_colorOscuro;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  @extend %flexColumn;
   align-items: center;
   justify-content: center;
 
@@ -393,14 +396,12 @@ $imagenes: img1 img2 img3 img4 img5;
   .c_div {
     width: 80%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
+    @extend %flexRow;
   }
 }
 
 .curriculum .div_circulo {
-  display: flex;
-  flex-direction: column;
+    @extend %flexColumn;
   width: 100px;
   height: 20%;
 }
@@ -430,8 +431,7 @@ $imagenes: img1 img2 img3 img4 img5;
   margin-top: 70px;
 }
 .txt {
-  display: flex;
-  flex-direction: column;
+    @extend %flexColumn;
   width: 100%;
   height: 100%;
   justify-content: left;
@@ -500,8 +500,7 @@ $imagenes: img1 img2 img3 img4 img5;
   .c_div .div_circulo {
     width: 100%;
     height: 20%;
-    display: flex;
-    flex-direction: row;
+    @extend %flexRow;
     justify-content: space-between;
   }
 
@@ -567,8 +566,7 @@ $imagenes: img1 img2 img3 img4 img5;
   .c_div .div_circulo {
     width: 100%;
     height: 20%;
-    display: flex;
-    flex-direction: row;
+    @extend %flexRow;
     justify-content: space-between;
   }
 
